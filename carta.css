@@ -1,105 +1,77 @@
-body {
-  font-family: "Poppins", sans-serif;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  text-align: center;
-  color: #333;
-  transition: background-color 0.5s ease;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>💖 Una carta para ti amorr 💖</title>
 
-h2 {
-  margin-bottom: 20px;
-}
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-.screen {
-  display: none;
-  animation: fadeIn 0.8s ease;
-  width: 90%;
-  max-width: 600px;
-}
+  <!-- CSS -->
+  <link rel="stylesheet" href="carta.css">
+</head>
 
-.active {
-  display: block;
-}
+<body>
 
-.main-img {
-  width: 280px;
-  height: auto;
-  margin-bottom: 15px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  border: none;
-  box-shadow: none;
-}
+  <div class="screen active" id="screen1">
+    <h2>Hola, te llegó un correo</h2>
+    <img src="fotos/primera.jpg" alt="Correo" class="main-img" onclick="nextScreen(2)">
+  </div>
 
-.main-img:hover {
-  transform: scale(1.05);
-}
+  <div class="screen" id="screen2">
+    <h2>Una cartita para ti</h2>
+    <img src="fotos/segunda.jpg" alt="Carta" class="main-img" onclick="nextScreen(3)">
+  </div>
 
-.card {
-  background: repeating-linear-gradient(
-    white,
-    white 28px,
-    #e3e3e3 29px
-  );
-  border-radius: 0;
-  padding: 40px 60px;
-  border: 2px solid #e5e5e5;
-  width: 95%;
-  max-width: 1100px;
-  text-align: left;
-  margin: 0 auto;
-  box-sizing: border-box;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  animation: fadeIn 1s ease;
-  height: 1100px;
-}
+  <div class="screen" id="screen3">
+    <h2>¡Ábrelo!</h2>
+    <img src="fotos/tercera.jpg" alt="Sobre" class="main-img" onclick="nextScreen(4)">
+  </div>
 
-.card h3 {
-  font-family: 'Dancing Script', cursive;
-  font-size: 2em;
-  text-align: left;
-  margin-bottom: 20px;
-  margin-left: 10px;
-  color: #444;
-}
+  <div class="screen" id="screen4">
+    <h2>¿Qué dirá?</h2>
+    <img src="fotos/cuarta.jpg" alt="Carta lista" class="main-img" onclick="nextScreen(5)">
+  </div>
 
-.card p {
-  font-family: 'Dancing Script', cursive;
-  font-size: 1.3em;
-  line-height: 1.6;
-  text-align: justify;
-  color: #444;
-  margin: 10px 0;
-}
+  <div class="screen" id="screen5">
+    <div class="card">
+      <h3>Querida Larisa,</h3>
 
-.return-btn {
-  margin-top: 25px;
-  padding: 10px 20px;
-  font-size: 1em;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s;
-  background-color: #ff4f81;
-  color: white;
-}
+      <p>
+        No sé ni cómo empezar bien jasjja, realmente para expresar lo que siento por ti 
+        en una sola carta no me alcanza. Tenerte en mi mundo es tener una persona increíble 
+        y maravillosa. Con mandarme un mensaje, decirme bebito o algo lindo, todo mi día cambia.
+      </p>
 
-.return-btn:hover {
-  background-color: #ff2a66;
-}
+      <p>
+        Hay momentos en donde no nos llegamos a entender del todo, pero siempre trato de estar ahí para ti,
+        intentar hacerte feliz y que sepas que siempre tienes a alguien que le importas muchísimo.
+      </p>
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
+      <p>
+        Eres mi felicidad, eres lo mejor que me ha podido pasar. Sé que puedo ser alguien complicado,
+        tengo defectos e inseguridades, pero siempre intento dar lo mejor de mí para que te sientas amada.
+      </p>
+
+      <p>
+        Me encanta la forma en que hablas, cómo me haces reír incluso cuando no tengo ganas,
+        y esa tranquilidad que me das. A veces pienso en ti sin motivo alguno… y termino sonriendo.
+      </p>
+
+      <p>
+        Te valoro, te admiro y te tengo un amor enorme.
+      </p>
+
+      <p>Con mucho amor,</p>
+      <p>Wender 💌</p>
+    </div>
+
+    <div class="btn-container">
+      <button class="return-btn" onclick="nextScreen(1)">🔙 Regresar</button>
+    </div>
+  </div>
+
+  <script src="carta.js"></script>
+</body>
+</html>
