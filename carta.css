@@ -1,0 +1,105 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  text-align: center;
+  color: #333;
+  transition: background-color 0.5s ease;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.screen {
+  display: none;
+  animation: fadeIn 0.8s ease;
+  width: 90%;
+  max-width: 600px;
+}
+
+.active {
+  display: block;
+}
+
+.main-img {
+  width: 280px;
+  height: auto;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border: none;
+  box-shadow: none;
+}
+
+.main-img:hover {
+  transform: scale(1.05);
+}
+
+.card {
+  background: repeating-linear-gradient(
+    white,
+    white 28px,
+    #e3e3e3 29px
+  );
+  border-radius: 0;
+  padding: 40px 60px;
+  border: 2px solid #e5e5e5;
+  width: 95%;
+  max-width: 1100px;
+  text-align: left;
+  margin: 0 auto;
+  box-sizing: border-box;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease;
+  height: 1100px;
+}
+
+.card h3 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2em;
+  text-align: left;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  color: #444;
+}
+
+.card p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.3em;
+  line-height: 1.6;
+  text-align: justify;
+  color: #444;
+  margin: 10px 0;
+}
+
+.return-btn {
+  margin-top: 25px;
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #ff4f81;
+  color: white;
+}
+
+.return-btn:hover {
+  background-color: #ff2a66;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
